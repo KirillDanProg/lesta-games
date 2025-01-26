@@ -1,0 +1,108 @@
+.shipCardContainer {
+    position: relative;
+    clip-path: inset(0 0 0 0px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: start;
+    flex: 0 1 380px;
+
+    &:hover {
+        .shipImage {
+            transition: all 0.5s ease-in-out;
+            transform: scale(0.9) translate(30px,24px);
+        }
+        .shipCard {
+            transition: all 0.25s ease-in-out;
+            .shipCardInfo {
+                opacity: 1;
+                background-color: rgba(0, 0, 0, 0.8);
+                mask-image: linear-gradient(to left, transparent 15%, rgb(30, 30, 30) 45%);
+            }
+        }
+    }
+
+    .shipImage {
+        position: relative;
+        height: 320px;
+        align-self: end;
+        transform: scale(0.8) translate(-50px, 50px);
+        z-index: 9;
+        cursor: pointer;
+    }
+
+    .shipCardHeader {
+        position: absolute;
+        display: flex;
+        top: 38%;
+        align-items: center;
+        gap: 8px;
+
+        .title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--main);
+        }
+        .shipTypeIcon {
+            width: 44px;
+        }
+        .level {
+            font-size: 24px;
+            font-weight: 700;
+        }
+    }
+
+    .shipCard {
+        position: absolute;
+        width: 80%;
+        overflow: hidden;
+        transition: all 0.25s ease-in-out;
+        background-color: rgba(0, 0, 0, 0.4);
+
+        .shipCardInfo {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 80%;
+            padding: 12px;
+            transition: 0.25s;
+            opacity: 0; 
+            z-index: 10;
+
+           .shipInfoValue {
+            color: var(--main);
+           }
+
+           * {
+            margin-bottom: 8px;
+           }
+        }
+
+        .wavesImage {
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.5);
+            z-index: -1;
+            mask-image: linear-gradient(to bottom, transparent 50%, rgb(30, 30, 30) 80%);
+        }
+
+        .nationFlag {
+            height: 100%;
+            top: -10px;
+            left: -30px;
+            transform: scale(1);
+            position: absolute;
+            opacity: 0.8;
+            z-index: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .shipCardContainer {
+        .shipCardHeader {
+            top: 30%;
+        }
+    }
+}

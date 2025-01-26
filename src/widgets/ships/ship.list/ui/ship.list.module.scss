@@ -1,0 +1,10 @@
+.shipsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: center;
+    gap: 0px;
+    height: 80vh;
+    overflow-y: scroll;
+}
