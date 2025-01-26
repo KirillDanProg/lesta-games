@@ -1,0 +1,15 @@
+.checkboxContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .checkbox,
+    label {
+        cursor: pointer;
+    }
+
+    .checkbox {
+        width: 24px;
+        height: 24px;
+    }
+}
