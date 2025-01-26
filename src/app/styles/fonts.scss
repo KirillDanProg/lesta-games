@@ -1,0 +1,27 @@
+@font-face {
+    font-family: Roboto;
+    src: local("Roboto-Regular"),
+      url("/src/app/assets/font/roboto-regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: Roboto;
+    src: local("Roboto-Medium"),
+      url("/src/app/assets/font/roboto-medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: Roboto;
+    src: local("Roboto-Bold"),
+      url("/src/app/assets/font/roboto-bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  
