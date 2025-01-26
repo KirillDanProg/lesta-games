@@ -7,6 +7,7 @@
     align-items: end;
     justify-content: start;
     flex: 0 1 380px;
+    cursor: pointer;
 
     &:hover {
         .shipImage {
@@ -29,7 +30,6 @@
         align-self: end;
         transform: scale(0.8) translate(-50px, 50px);
         z-index: 9;
-        cursor: pointer;
     }
 
     .shipCardHeader {
