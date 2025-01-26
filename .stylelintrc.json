@@ -1,0 +1,31 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-clean-order",
+    "stylelint-config-recommended"
+  ],
+  "rules": {
+    "selector-class-pattern": "^.*$",
+    "keyframes-name-pattern": null,
+    "order/properties-order": [
+      {
+        "groupName": "dimensions",
+        "emptyLineBefore": "always",
+        "properties": ["width", "height"]
+      },
+      {
+        "groupName": "font",
+        "emptyLineBefore": "always",
+        "properties": ["font-size", "font-weight"]
+      },
+      "display",
+      "gap",
+      "padding",
+      "padding-top",
+      "padding-right",
+      "padding-bottom",
+      "padding-left",
+      "color"
+    ]
+  }
+}
