@@ -1,0 +1,67 @@
+.filterPanelContainer {
+    padding: 24px 0px;
+    width: inherit;
+
+    .filterControls {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-size: 18px;
+    }
+
+    .filterPanel {
+        position: fixed;
+        top: 144px;
+        width: inherit;
+        height: 0px;
+        display: flex;
+        justify-content: start;
+        gap: 64px;
+        transition: all 0.5s ease;
+        margin-bottom: 124px;
+        padding: 0 40px;
+        background-color: var(--bg-grey);
+        backdrop-filter: blur(24px);
+        border: 1px solid var(--bg-grey-light);
+        overflow: hidden;
+        z-index: 20;
+
+        h4 {
+            color: var(--main);
+            padding-bottom: 12px;
+        }
+
+        .panelUnit {
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: start;
+
+            .panelUnitImage {
+                width: 32px;
+                height: 24px;
+            }
+        }
+    }
+
+    .open {
+        height: 240px;
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .filterPanelContainer {
+        .filterPanel {
+            gap: 32px;
+            .panelUnit {
+                height: auto;
+            }
+        }
+        .open {
+            height: auto;
+        }
+    }
+}
