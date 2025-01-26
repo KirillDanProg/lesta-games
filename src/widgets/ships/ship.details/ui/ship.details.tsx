@@ -17,11 +17,17 @@ export const ShipDetails = (props: ShipDetailsProps) => {
       <img src={ship.icons?.large} />
 
       <div className={s.shipDetailsInfo}>
-        <div>тип: {ship.type?.title}</div>
-        <div>страна: {ship.nation?.title}</div>
-        <div>уровень: {ship.level}</div>
         <div>
-          опсиание: <br />
+          <strong>тип:</strong> {ship.type?.title}
+        </div>
+        <div>
+          <strong>страна:</strong> {ship.nation?.title}
+        </div>
+        <div>
+          <strong>уровень:</strong> {ship.level}
+        </div>
+        <div>
+          <strong>опсиание:</strong> <br />
           {ship.description}
         </div>
       </div>
