@@ -4,13 +4,18 @@ import s from "./ship.card.module.scss";
 
 type ShipCardProps = {
   ship: Vehicle;
+  onOpenShipDetailsModal: (ship: Vehicle) => void;
 };
 
 const ShipCard = (props: ShipCardProps) => {
-  const { ship } = props;
+  const { ship, onOpenShipDetailsModal } = props;
+
+  const onShipCardClick = () => {
+    onOpenShipDetailsModal(ship);
+  };
 
   return (
-    <div key={ship.id} className={s.shipCardContainer}>
+    <div className={s.shipCardContainer} onClick={onShipCardClick}>
       <img src={ship.icons?.large} className={s.shipImage} />
       <ShipCardHeader ship={ship} />
 
@@ -27,6 +32,10 @@ const ShipCard = (props: ShipCardProps) => {
           <div className={s.level}>
             ур: <span className={s.shipInfoValue}>{ship.level}</span>
           </div>
+          {/* <div>
+            опсиание: <br />
+            <span className={s.shipInfoValue}>{ship.description}</span>
+          </div> */}
         </div>
       </div>
     </div>

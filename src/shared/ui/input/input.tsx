@@ -1,26 +1,18 @@
-import { useDebounce } from "@/shared/lib/hooks/use.debounce";
-import { ChangeEventHandler, useEffect, useState } from "react";
+import { ChangeEventHandler, InputHTMLAttributes } from "react";
 import s from "./input.module.scss";
 
-type InputProps = {
+type InputProps = InputHTMLAttributes<HTMLInputElement> & {
   initialValue?: string;
+  value: string;
   changeCallback: (value: string) => void;
 };
 
 export const Input = (props: InputProps) => {
-  const { initialValue = "", changeCallback } = props;
-
-  const [value, setValue] = useState(initialValue);
-  const debouncedValue = useDebounce(value);
+  const { value, changeCallback, className, ...restProps } = props;
 
   const onChangeHandler: ChangeEventHandler<HTMLInputElement> = event => {
-    const value = event.currentTarget.value;
-    setValue(value);
+    changeCallback(event.currentTarget.value);
   };
 
-  useEffect(() => {
-    changeCallback(debouncedValue.toLowerCase());
-  }, [debouncedValue]);
-
-  return <input value={value} onChange={onChangeHandler} className={s.input} />;
+  return <input value={value} onChange={onChangeHandler} className={`${className} ${s.input}`} {...restProps} />;
 };

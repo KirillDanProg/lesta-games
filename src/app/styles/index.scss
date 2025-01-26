@@ -19,8 +19,6 @@ body {
     width: 70%;
     margin: 0 auto;
     padding: 20px;
-    // clip-path: inset(100px, 0, 0, 0);
-    // overflow: hidden;
 }
 
 img {
@@ -35,6 +33,15 @@ img {
     path {
         fill: var(--text-light);
     }
+}
+
+.plugText {
+    width: 100%;
+    margin: 40px;
+    padding: 20px 40px;
+    font-size: 24px;
+    text-align: center;
+    background-color: var(--bg-grey);
 }
 
 @media screen and (min-width: 320px) {
