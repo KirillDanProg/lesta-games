@@ -12,6 +12,8 @@ export const FilterPanel = memo(() => {
 
   return (
     <>
+      {toggle && <div className={s.backdrop} onClick={() => setToggle(false)}></div>}
+
       <div className={s.filterPanelContainer}>
         <div className={s.filterControls}>
           <FilterIcon onClick={() => setToggle(prev => !prev)} width={24} height={24} className="icon" />

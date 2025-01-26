@@ -52,6 +52,13 @@
     }
 }
 
+.backdrop {
+    position: absolute;
+    inset: 0;
+    background-color: transparent;
+    z-index: 19;
+}
+
 @media screen and (max-width: 600px) {
     .filterPanelContainer {
         .filterPanel {
